@@ -1,4 +1,5 @@
 import { useLocation, useParams, useSearchParams } from "react-router-dom";
+import UserList from "./UserList";
 
 const UserDetailPage = () => {
   const params = useParams();
@@ -7,6 +8,7 @@ const UserDetailPage = () => {
 
   return (
     <div>
+      <UserList />
       <p>User {params.id}</p>
     </div>
   );
