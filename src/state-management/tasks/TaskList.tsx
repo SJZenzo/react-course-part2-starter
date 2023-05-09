@@ -1,13 +1,7 @@
-import { useReducer, useState } from "react";
-import taskReducer from "./reducers/taskReducer";
-
-export interface Task {
-  id: number;
-  title: string;
-}
+import useTasks from "./useTasks";
 
 const TaskList = () => {
-  const [tasks, dispatch] = useReducer(taskReducer, []);
+  const { tasks, dispatch } = useTasks();
 
   return (
     <>
